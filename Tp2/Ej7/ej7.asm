@@ -22,6 +22,7 @@ _start:
   lea esi, [arr] ;uso esi porque es el mas comun que suele usarse para iterar sobre arrays.
   mov edx, length
   mov eax, [esi + ecx * 4]
+  mov ecx, 0
 
 .loop:
   cmp  [esi + ecx * 4], eax
