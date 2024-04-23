@@ -1,0 +1,7 @@
+1. El problema de hacer esto es que no hay manera de saber si se va a utilizar como el usuario lo espera. Cuando una funcion se utiliza, se le crea su propio stack y se destruye cuando se retorna. Entonces,
+una vez que se crea el arreglo, si se devuelve puede que el arreglo apunte a una direccion de memoria que ya no esta disponible.
+Esto se soluciona haciendo uso de memoria dinamica.
+
+2.Para las dos variables, el retorno y para que el esp apunte bien.
+
+

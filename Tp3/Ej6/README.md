@@ -1,0 +1,1 @@
+#Todas las variables que se "reinician" con cada llamada a función se guardan en el stack- Recordar que siempre que salgo de una función, bajaba el stack para balancearlo. Esto es: "la variable se destruye". 

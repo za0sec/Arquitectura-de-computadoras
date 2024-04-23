@@ -1,0 +1,13 @@
+1. Declara la variable pero no la inicializa.Gcc no la inicializa ni reserva espacio.
+
+2. Variable local con inicializacion. Se guarda en el stackframe de la funcion y luego se destruye junto con el stackframe.
+
+3. Variable global sin inicializar que luego se le realiza una escritura en la funcion foo. Las variables globales se guardan en GLOBAL_OFFSET_TABLE(GOT). No se reserva espacio en el stackframe.
+
+4. Variable local inicializada por main que conserva su valor a lo largo de toda la ejecución al igual que en el ejemplo anterior, no se reserva espacio para esta en el sf y se guarda en la GOT.
+
+5. Variable declarada en otro archivo. El compilador inicializa la variable externa y buscandola en la GOT.
+
+6. Variable global inicializada y modificada.
+
+7. La variable global inicializada por main es visible unicamente por el archivo variables7.c
