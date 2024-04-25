@@ -1,5 +1,6 @@
-
 # Diferencias?
+
+[FUENTE](https://www.cs.uaf.edu/courses/cs301/2014-fall/notes/struct/)
 
 ## Pasar structs por copia implica:
 
@@ -40,7 +41,7 @@ void func(struct Data* ptr) {
 ```c
 
 section .data
-  es db 0, 0, 0, 0, 0, 0, 0, 0  ; Reserva espacio para 'struct Data'
+  es db 0, 0, 0, 0, 0, 0, 0, 0 
 
 section .text
 global _start
@@ -49,15 +50,15 @@ global _start
 _start:
   push offset es ;siendo 'es' un struct. Empuja la dirección de 'estructura' en el stack
   call modifyStruct
-  add esp, 4  ; limpiar el stack después de la llamada
+  add esp, 4        ;limpia stack despues de la func
 
 modifyStruct:
   push ebp
   mov ebp, esp
-  mov eax, [ebp+8]  ; eax ahora tiene la dirección de 'es'
+  mov eax, [ebp+8]   ;eax ahora tiene la dirección de 'es'
   add [eax], 5      ; es.a += 5
-  add [eax+4], 10   ; es.b += 10
+  add [eax+4], 10   ;es.b += 10
   pop ebp
-  ret
+  ret           ;god
 
 ```
