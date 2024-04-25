@@ -19,14 +19,14 @@ Aca arranca la suposicion:
 fibonacci:
 	push ebp
 	mov	ebp, esp
-	push ebx
+	push ebx     ; este yo no lo puse :(
 	sub	esp, 4
 	cmp	[ebp + 8], 1
-	jg	.part2
+	jg	.recursive
 	mov	eax, [ebp + 8]
 	jmp	.exit
 
-.part2:
+.recurisve:
 	mov	eax, [ebp + 8]
 	sub	eax, 1
 	sub	esp, 12
