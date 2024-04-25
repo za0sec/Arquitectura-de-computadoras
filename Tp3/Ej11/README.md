@@ -2,7 +2,7 @@
 
 Tomo solo esta parte del codigo:
 
-``
+```c
 int fibonacci(int n){
 
   if (n < 2){
@@ -11,11 +11,11 @@ int fibonacci(int n){
 
   return fibonacci(n-1) + fibonacci(n-2);
 }
-``
+```
 
 Aca arranca la suposicion:
 
-``
+```c
 fibonacci:
 	push ebp
 	mov	ebp, esp
@@ -49,5 +49,5 @@ fibonacci:
 	leave
 	ret
 
-``
+```
 
