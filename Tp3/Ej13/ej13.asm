@@ -5,7 +5,6 @@ section .data
 section .text
 global _start
 
-
 _start:
   push offset es ;siendo 'es' un struct
   call modifyStruct
